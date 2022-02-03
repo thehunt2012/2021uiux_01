@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            var myslider = $(".slider").bxSlider({
+                // pager:false,
+                controls:false,
+                pagerCustom:".boxPager",
+                // mode:"vertical"
+            });
+
+            $(".nextBtn").click(function(){
+                myslider.goToNextSlide();
+            })
+            $(".prevBtn").click(function(){
+                myslider.goToPrevSlide();
+            })
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
