@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이미디어</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        li{list-style: none;}
+        .clearfix:after{content: ""; display: block; clear: both;}
+        img{display: block;}
+        a:link,a:visited{color: black; text-decoration: none;}
+        body{font-family: 'Roboto', sans-serif;}
+
+        .util_wrapper{width: 980px; margin: 0 auto;}
+        .util_wrapper>ul.util{float: right;}
+        .util_wrapper>ul.util>li{
+            float: left;
+            position: relative;
+        }
+        .util_wrapper>ul.util>li:after{
+            content: ""; width: 1px; height: 11px;
+            display: block; background-color: #ccc;
+            position: absolute; top: 7px;
+        }
+        .util_wrapper>ul.util>li:first-child:after{
+            content: ""; display: none;
+        }
+        .util_wrapper>ul.util>li>a{display: block; font-size: 12px; text-align: center;
+            padding: 6px 10px;}
+        .util_wrapper>ul.util>li>a:hover{color:#E8A5A5}
+
+        .wall{background-color:#cc6b6b; height: 1px;}
+
+        .logo_wrapper{width: 980px; margin: 0 auto; padding: 23px;}
+        .logo_wrapper>h1>a{display: block; font-size: 24px; line-height:28px;
+            text-align: center;}
+        .logo_wrapper>h1>a:hover{color:#E8A5A5}
+
+        .nav_wrapper{
+            background-color: #E47171;
+            border-bottom: 3px solid rgb(151, 55, 55);
+        }
+        .nav_wrapper>ul.nav{
+            width: 980px; margin: 0 auto;
+        }
+        .nav_wrapper>ul.nav>li{
+            float: left; width: 16.666%;
+            border-right: 1px solid #dd9c9c;
+        }
+        .nav_wrapper>ul.nav>li:first-child{
+            border-left: 1px solid #dd9c9c;
+        }
+        .nav_wrapper>ul.nav>li>a{color: white; font-size: 16px; line-height: 45px;
+            display: block; text-align: center; font-weight: bold;}
+        .nav_wrapper>ul.nav>li>a:hover{background-color: #E8A5A5;}
+
+        .visual{
+            /* background-color: rgb(165, 81, 81); */
+            background-image: url(images/main_bg01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 400px;
+        }
+        .slide{
+            width: 980px; height: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slide .img1{
+            position: absolute;
+            top: 100px;
+        }
+        .slide .img2{
+            position: absolute;
+            right: 0;
+        }
+
+        .bannerWrap{background-color: #eee;}
+        .bannerWrap>.banner{width: 980px; margin: 0 auto; margin-bottom: 50px;}
+        .bannerWrap>.banner li{
+            float: left;
+            width: 20%;
+            padding: 13px;
+            height: 196px;
+        }
+        .bannerWrap>.banner img{margin: 0 auto; margin-bottom: 10px;}
+        .bannerWrap>.banner h3{font-size: 18px; text-align: 
+            center; color: white;
+            margin-bottom: 5px;
+        }
+        .bannerWrap>.banner p{font-size: 14px; text-align: center; color: white;}
+        .bannerWrap>.banner li:nth-child(1){background-color: #aa5f5f;}
+        .bannerWrap>.banner li:nth-child(2){background-color: rgb(219, 163, 163);}
+        .bannerWrap>.banner li:nth-child(3){background-color: rgb(146, 129, 129);}
+        .bannerWrap>.banner li:nth-child(4){background-color: rgb(112, 51, 51);}
+        .bannerWrap>.banner li:nth-child(5){background-color: rgb(216, 92, 92);}
+
+        .section_one{width: 980px; margin: 0 auto;}
+        .section_one li.card_one{float:left; width: 310px; margin-right: 25px;}
+        .section_one li.card_one:last-child{margin-right: 0;}
+        .section_one .card_body{
+            padding: 16px 16px;
+            border: 1px solid #ccc;
+            border-top: 0;
+        }
+        .section_one h3{font-size: 18px; margin-bottom: 5px;}
+        .section_one p{font-size: 14px;}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="util_wrapper clearfix">
+            <ul class="util clearfix">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">English</a></li>
+            </ul>
+        </div>
+        
+        <div class="wall"></div>
+        
+        <div class="logo_wrapper">
+            <h1><a href="#">하이미디어</a></h1>
+        </div>
+    </header>
+        
+        <div class="nav_wrapper">
+            <ul class="nav clearfix">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">제품소개</a></li>
+                <li><a href="#">사업영역</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">사회공헌</a></li>
+                <li><a href="#">인재채용</a></li>
+            </ul>
+        </div>
+
+        <div class="visual">
+            <div class="slide">
+                <img src="images/main_visual_text.png" alt="" class="img1">
+                <img src="images/main_slider_img.png" alt="" class="img2">
+            </div>
+        </div>
+
+        <div class="bannerWrap">
+            <div class="banner">
+                <ul class="clearfix">
+                    <li>
+                        <img src="images/icon01.png" alt="">
+                        <h3>사회공헌</h3>
+                        <p>소외된 이웃과 합께합니다. </p>
+                    </li>
+                    <li>
+                        <img src="images/icon02.png" alt="">
+                        <h3>사회공헌</h3>
+                        <p>소외된 이웃과 합께합니다. </p>
+                    </li>
+                    <li>
+                        <img src="images/icon03.png" alt="">
+                        <h3>사회공헌</h3>
+                        <p>소외된 이웃과 합께합니다. </p>
+                    </li>
+                    <li>
+                        <img src="images/icon04.png" alt="">
+                        <h3>사회공헌</h3>
+                        <p>소외된 이웃과 합께합니다. </p>
+                    </li>
+                    <li>
+                        <img src="images/icon05.png" alt="">
+                        <h3>사회공헌</h3>
+                        <p>소외된 이웃과 합께합니다. </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section_one">
+            <ul class="clearfix">
+                <li class="card_one">
+                    <img src="images/content_img01.png" alt="">
+                    <div class="card_body">
+                        <h3>회사개요</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, repudiandae.</p>
+                    </div>
+                </li>
+                <li class="card_one">
+                    <img src="images/content_img02.png" alt="">
+                    <div class="card_body">
+                        <h3>회사개요</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, repudiandae.</p>
+                    </div>
+                </li>
+                <li class="card_one">
+                    <img src="images/content_img03.png" alt="">
+                    <div class="card_body">
+                        <h3>회사개요</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vero, repudiandae.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+</body>
+</html>

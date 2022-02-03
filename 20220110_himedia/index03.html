@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>연습</title>
+    <style>
+        *{margin: 0;padding: 0; box-sizing: border-box;}
+        li{list-style:none;}
+        img{display: block;}
+        .clearfix:after{content:"";display:block;clear:both;}
+        a:link,a:visited{color: black;text-decoration: none;}
+        body{ font-family: 'Roboto', sans-serif;}
+
+        .util_wrapper{
+            width: 980px;
+            margin: 0 auto;
+        }
+        .util_wrapper>ul{
+            float: right;
+        }
+        .util_wrapper>ul>li{
+            float: left;
+            position: relative;
+        }
+        .util_wrapper>ul>li:after{
+            position: absolute;
+            content: "";
+            display: block;
+            width: 1px; height: 11px;
+            background-color: #ccc;
+            top: 7px;
+        }
+        .util_wrapper>ul>li:first-child:after{
+            content:""; display: none;
+        }
+        .util_wrapper>ul>li>a{
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            padding:6px 10px;
+        }
+
+        .wall{
+            background-color: #c4c4c4;
+            height: 1px;
+        }
+
+        .logo_wrapper{
+            width: 980px; margin: 0 auto; padding: 23px;
+        }
+        .logo_wrapper>h1>a{
+            font-size: 24px; line-height: 28px;
+            display: block; text-align: center;
+        }
+
+        .nav_wrapper{
+            background-color: #1D5DA4;
+            border-bottom: 2px solid #000;}
+        .nav_wrapper>ul{width: 980px; margin: 0 auto;}
+        .nav_wrapper>ul>li{
+            float: left;
+            width: 16.666%;
+            border-right: 1px solid #336DAC;
+        }
+        .nav_wrapper>ul>li:first-child{border-left: 1px solid #336DAC;}
+        .nav_wrapper>ul>li>a{
+            display: block;
+            text-align: center;
+            color: white;
+            font-size: 16px;
+            line-height: 45px;
+            font-weight: bold;
+        }
+        .nav_wrapper>ul>li>a:hover{
+            background-color: #152e4b;
+        }
+
+        .visual{
+            background-image: url(images/main_bg01.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 400px;
+        }
+        .slide{
+            width: 980px; height: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            
+        }
+        .slide .img01{
+            position: absolute;
+            top: 100px;
+        }
+        .slide .img02{
+            position: absolute;
+            right: 0;
+        }
+
+        .bannerWrap{background-color: #eee;}
+        .bannerWrap .banner{width: 980px; margin: 0 auto; margin-bottom: 50px;}
+        .bannerWrap li{
+            float: left;
+            width: 20%;
+            height: 196px;
+            padding: 13px;
+        }
+        .bannerWrap img{margin: 0 auto; margin-bottom: 10px;}
+        .bannerWrap h3{font-size: 18px; text-align: center; color: white; margin-bottom: 5px;}
+        .bannerWrap p{font-size: 14px; text-align: center; color: white;}
+        .bannerWrap li:nth-child(1){background-color:#7C99B9;}
+        .bannerWrap li:nth-child(2){background-color:#4F74A1;}
+        .bannerWrap li:nth-child(3){background-color:#4B8CE0;}
+        .bannerWrap li:nth-child(4){background-color:#3DB5F2;}
+        .bannerWrap li:nth-child(5){background-color:#95C8FF;}
+
+        .section_one{width: 980px; margin: 0 auto; margin-bottom: 25px;}
+        .section_one li.card_one{float: left; width: 310px; margin-right: 25px;}
+        .section_one li:last-child{margin-right: 0;}
+        .section_one .card_body{
+            border: 1px solid #ccc;
+            border-top: 0;
+            padding: 13px;
+        }
+
+        .section_one h3,
+        .section_two h3{font-size: 18px; margin-bottom: 10px;}
+        .section_one p,
+        .section_two p{font-size: 14px; margin-bottom: 10px;}
+        .section_two p{letter-spacing: -0.085em;}
+
+        .section_two .btn{font-size: 14px; color: #4B8BE2;}
+
+        .section_two{width: 980px; margin: 0 auto; margin-bottom: 50px;}
+        .section_two li.card_two{
+            float: left; 
+            width: 310px;
+            border: 1px solid #ccc;
+            margin-right: 25px;
+            padding: 17px;
+            position: relative;
+            overflow: hidden;
+        }
+        .section_two li:last-child{margin-right: 0;}
+        .section_two .card_two img{
+            position: absolute;
+            right: -55px;
+            top: 5px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="util_wrapper clearfix">
+            <ul class="util clearfix">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Join</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">English</a></li>
+            </ul>
+        </div>
+
+        <div class="wall"></div>
+
+        <div class="logo_wrapper">
+            <h1><a href="#">하이미디어</a></h1>
+        </div>
+
+        <div class="nav_wrapper">
+            <ul class="nav clearfix">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">제품소개</a></li>
+                <li><a href="#">사업영역</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">사회공헌</a></li>
+                <li><a href="#">인재채용</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="visual">
+        <div class="slide">
+            <img src="images/main_visual_text.png" alt="" class="img01">
+            <img src="images/main_slider_img.png" alt="" class="img02">
+        </div>
+    </div>
+
+    <div class="bannerWrap">
+        <div class="banner">
+            <ul class="clearfix">
+                <li>
+                    <img src="images/icon01.png" alt="">
+                    <h3>사회공헌</h3>
+                    <p>소외된 이웃과 합께합니다. </p>
+                </li>
+                <li>
+                    <img src="images/icon02.png" alt="">
+                    <h3>사회공헌</h3>
+                    <p>소외된 이웃과 합께합니다. </p>
+                </li>
+                <li>
+                    <img src="images/icon03.png" alt="">
+                    <h3>사회공헌</h3>
+                    <p>소외된 이웃과 합께합니다. </p>
+                </li>
+                <li>
+                    <img src="images/icon04.png" alt="">
+                    <h3>사회공헌</h3>
+                    <p>소외된 이웃과 합께합니다. </p>
+                </li>
+                <li>
+                    <img src="images/icon05.png" alt="">
+                    <h3>사회공헌</h3>
+                    <p>소외된 이웃과 합께합니다. </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="section_one">
+        <ul class="clearfix">
+            <li class="card_one">
+                <img src="images/content_img01.png" alt="">
+                <div class="card_body">
+                    <h3>회사개요</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Adipisci, officia.</p>
+                </div>
+            </li>
+            <li class="card_one">
+                <img src="images/content_img02.png" alt="">
+                <div class="card_body">
+                       <h3>회사개요</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Adipisci, officia.</p>
+                 </div>
+            </li>
+            <li class="card_one">
+                <img src="images/content_img03.png" alt="">
+                <div class="card_body">
+                    <h3>회사개요</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Adipisci, officia.</p>
+                </div>
+             </li>
+        </ul>
+    </div>
+
+    <div class="section_two">
+        <ul class="clearfix">
+            <li class="card_two">
+                <img src="images/content_icon01.png" alt="">
+                <div class="card_body">
+                    <h3>사보</h3>
+                    <p>풍부한 경험과 최고의 <br> 기술력으로 새로운 미래를 <br>
+                    열어갑니다. </p>
+                    <div class="btn">자세히보기</div>
+                </div>
+            </li>
+            <li class="card_two">
+                <img src="images/content_icon02.png" alt="">
+                <div class="card_body">
+                    <h3>찾아오시는 길</h3>
+                    <p>풍부한 경험과 최고의 <br> 기술력으로 새로운 미래를 <br>
+                    열어갑니다. </p>
+                    <div class="btn">자세히보기</div>
+                </div>
+            </li>
+            <li class="card_two">
+                <img src="images/content_icon03.png" alt="">
+                <div class="card_body">
+                    <h3>제품정보</h3>
+                    <p>풍부한 경험과 최고의 <br> 기술력으로 새로운 미래를 <br>
+                    열어갑니다. </p>
+                    <div class="btn">자세히보기</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

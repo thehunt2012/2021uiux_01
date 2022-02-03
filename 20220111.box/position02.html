@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        li{list-style:none;}
+        .clearfix:after{content: ""; display: block; clear: both;}
+        a:link,a:visited{color: black;text-decoration: none;}
+        html,body{height: 100%;}
+
+        body{background-image: url(../images/bg_grid.gif);}
+
+        .boxWrap{width: 200px;height: 200px;background-color: green; margin-left:200px;
+        position: relative;
+        }
+
+        .box{width: 100px;height: 100px;background:skyblue;}
+        .box1{position: relative; z-index: 2;}
+        .box2{background: pink;position: absolute; top:50px; left: 50px; z-index: 1;}
+        .box3{background: blue;}
+        .box4{background: #000; position: absolute; left: 100px; top: 100px;}
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+        <div class="box box1">test1</div>
+        <div class="box box2">test2</div>
+        <div class="box box3">test3</div>
+        <div class="box box4">test4</div>
+    </div>
+</body>
+</html>

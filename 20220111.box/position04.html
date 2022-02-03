@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{height: 100%;}
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        body{
+            background-image: url(position01.jpg);
+            background-repeat: no-repeat;
+        }
+
+        .boxWrap{
+            width: 400px; height: 300px;
+            background-color: #b6bddd;
+            position: relative;
+            top: 100px;
+        }
+        .boxWrap>div{
+            width: 100px;height: 50px;
+            background-color: rgb(28, 119, 122);
+            position: absolute;
+        }
+        .boxWrap>div.box1{
+            left: 50%;
+            margin-left: -50px;
+        }
+        .boxWrap>div.box2{
+            right: 0;
+            top: 50%;
+            margin-top: -25px;
+        }
+        .boxWrap>div.box3{
+            bottom: 0;
+            left: 50%;
+            margin-left: -50px;
+        }
+        .boxWrap>div.box4{
+            top: 150px;
+            margin-top: -25px;
+        }
+        
+
+        
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+    </div>
+</body>
+</html>

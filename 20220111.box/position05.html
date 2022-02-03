@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,body{height: 100%;}
+        *{margin: 0;padding: 0;box-sizing: border-box;}
+        li{list-style: none;}
+        .clearfix:after{content:"";display:block;clear:both;}
+        a:link,a:visited{color: black;text-decoration: none;}
+        
+        body{
+            background-image: url(position02.jpg);
+            background-repeat: no-repeat;
+        }
+        .boxWrap{
+            width: 400px; height: 150px;
+            _background-color: #eaeaea;
+            border: 1px solid black;
+            margin-top: 100px;
+            position: relative;
+            /* top: 100px;
+            position: relative; */
+        }
+        .boxWrap>div{
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            background-color: #5EB1FF;
+        }
+        .boxWrap>div.box1{
+            width: 200px;
+            top: 10px;
+            left: 10px;
+        }
+        .boxWrap>div.box2{
+            width: 100px;
+            top: 10px;
+            right: 10px;
+        }
+        .boxWrap>div.box3{
+            width: 380px;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        .boxWrap1{
+            width: 400px;  height: 150px;
+            background-color: pink;
+            position: relative;
+            padding: 10px;
+        }
+
+        .boxWrap1>.box1{
+            width: 200px; height: 50px;
+            background-color: red;
+        }
+        .boxWrap1>.box2{
+            width: 100px; height: 50px;
+            background-color: red;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+        .boxWrap1>.box3{
+            width: 380px; height: 50px;
+            background-color: red;
+            position: absolute;
+            bottom: 10px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="boxWrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+
+    <div class="boxWrap1">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3">1111</div>
+    </div>
+    
+
+</body>
+</html>

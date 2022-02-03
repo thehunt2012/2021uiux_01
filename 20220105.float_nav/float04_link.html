@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float04_link</title>
+</head>
+    <style>
+        *{padding: 0;margin: 0;}
+        li{list-style: none;}
+        .clearfix:after{content:"";display:block;clear:both;}
+        a:link,a:visited{color:black;text-decoration:none;}
+
+        div.header{
+            width: 1000px;
+            margin: 0 auto;
+    
+        }
+        div.header>h1{
+            float: left;
+            text-align: center;
+            background-color:red;
+            width: 100px;
+            line-height: 40px;
+        }
+        div.header>ul{
+            float:right;
+            width: 700px;
+        }
+        div.header>ul>li{
+            float:left;
+            background-color: coral;
+            width: 20%;
+        }
+        div.header>ul>li>a{
+            display: block;
+            text-align: center;
+            line-height: 40px;
+        }
+        div.header>ul>li>a:hover{
+            background-color: #fff;
+            color:darkorange
+        }
+    </style>
+<body>
+<div class="header clearfix">
+    <h1>logo</h1> 
+    <ul class="nav clearfix"> 
+        <li><a href="#">menu1</a></li>
+        <li><a href="#">menu2</a></li>
+        <li><a href="#">menu3</a></li>
+        <li><a href="#">menu4</a></li>
+        <li><a href="#">menu5</a></li>
+    </ul>
+</div>
+    
+</body>
+</html>

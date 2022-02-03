@@ -1,0 +1,25 @@
+@charset 'utf-8';
+body{
+    background-image: url(../images/card_02.jpg);
+    background-repeat: no-repeat;
+}
+
+.card{
+    background-color: rgb(211, 117, 117); 
+    width: 300px;height: 400px; 
+    margin-top: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.card>img{
+    display: block;
+}
+.card_body{
+    padding: 10px 20px;
+}
+.card_body>h3{
+    font-size: 18px; line-height: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+.card_body>p{font-size: 14px; line-height: 16px; color: white;}

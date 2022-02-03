@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float06_link</title>
+</head>
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style:none;}
+        .clearfix:after{content:"";display:block;clear:none;}
+        a:link,a:visited{color:black;text-decoration:none;}
+
+        div.header{
+            margin: 0 auto;
+            width: 1000px;
+        }
+        div.header>h1{
+            text-align: center;
+            background-color: rgb(129, 168, 219);
+            line-height:50px;
+            color:white;
+        }
+        div.header>ul.nav>li{
+            float:left;
+            width: 20%;
+            background-color: rgb(233, 166, 200);
+        }
+        div.header>ul.nav>li>a{
+            display:block;
+            text-align: center;
+            line-height:25px;
+        }
+        div.header>ul.nav>li>a:hover{
+            background-color: rgb(129, 168, 219);
+            color:white;
+        }
+
+        div.visual{
+            margin: 0 auto;
+            height: 200px;
+            width: 1000px;
+            background-color: #fff;
+        }
+
+        div.header1{
+            margin: 0 auto;
+            width: 1000px;
+        }
+        div.header1>h1{
+            float:left;
+            background-color: rgb(186, 212, 93);
+            width: 100px;
+            text-align: center;
+            line-height:40px;
+        }
+        div.header1>ul{
+            float: right;
+            width: 700px;
+        }
+        div.header1>ul>li{
+            float:left;
+            background-color: rgb(226, 134, 72);
+            width: 20%;
+        }
+        div.header1>ul>li>a{
+            text-align: center;
+            display: block;
+            line-height:40px;
+        }
+        div.header1>ul>li>a:hover{
+            background-color: #fff;
+            color:rgb(226, 134, 72);
+        }
+    </style>
+<body>
+    <div class="header">
+        <h1>logo</h1>
+        <ul class="nav claerfix">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+        </ul>
+    </div>
+
+    <div class="visual"></div>
+
+    <div class="header1 clearfix">
+        <h1>logo</h1>
+        <ul class="nav1 clearfix">
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+            <li><a href="#">menu4</a></li>
+            <li><a href="#">menu5</a></li>
+        </ul>
+    </div>
+</body>
+</html>

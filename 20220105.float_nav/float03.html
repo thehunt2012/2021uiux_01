@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0;}
+        li{list-style:none}
+        .clearfix:after{content:"";display:block;clear:both}
+
+        div.header{
+            width: 1000px;
+            margin: 0 auto;
+            background-color:violet;
+        }
+        div.header>h1{
+            font-family: 'Luxurious Roman', cursive;
+            text-align: center;
+        }
+        div.header>ul.nav>li{
+            float: left;
+            width: 20%;
+            text-align: center;
+        }
+        div.visual{
+            margin: 0 auto;
+            width: 1000px;
+            height: 1000px;
+            background-color: rgb(142, 152, 185);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>logo</h1>
+        <ul class="nav clearfix">
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu5</li>
+        </ul>
+    </div>
+    <div class="visual"></div>
+</body>
+</html>
