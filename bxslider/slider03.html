@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider3</title>
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/reset.css">
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.bxslider.js"></script>
+
+    <style>
+        .bx-wrapper{
+        -moz-box-shadow: 0 0 0 #fff;
+        -webkit-box-shadow: 0 0 0 #fff;
+        box-shadow: 0 0 0 #fff;
+        border: 0;
+        margin-bottom: 0;
+        }
+        .sliderWrap{width: 900px; height: 450px; position: relative;}
+        .bx-wrapper .bx-pager{
+            /* background-color: #ccc; */
+            width: 250px;
+            bottom: 400px; right: 0;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a{
+            background-color: pink;
+            width: 15px; height: 15px;
+            border-radius: 15px;
+            border-radius:10px;transition:0.3s
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a.active{
+            background-color: red;
+            width: 15px; height: 15px;
+        }
+        .bx-wrapper .bx-pager.bx-default-pager a:hover{
+        }
+
+        .nextBtn,.preBtn{
+            position: absolute; 
+            top: 50%; margin-top: -35px;
+            cursor: pointer;
+        }
+        .preBtn{right: 0;}
+        .txt{position: absolute; top: 30px; left: 30px;}
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            var slide = $(".slider").bxSlider({
+                mode:'fade',
+                auto:true,
+                controls:false
+            });
+
+            $(".nextBtn").click(function(){
+                slide.goToNextSlide();
+            })
+            $(".preBtn").click(function(){
+                slide.goToNextSlide();
+            })
+        });
+    </script>
+
+</head>
+<body>
+    <div class="sliderWrap">
+        <ul class="slider">
+            <li><a href="#">
+                <img src="images/Frame 94.png" alt="">
+                <div class="txt">
+                    <h3>lorem</h3>
+                    <p>Lorem ipsum dolor sit.</p>
+                </div>
+            </a></li>
+            <li><a href="#"><img src="images/Frame 96.png" alt=""></a></li>
+            <li><a href="#"><img src="images/Frame 94.png" alt=""></a></li>
+            <li><a href="#"><img src="images/Frame 96.png" alt=""></a></li>
+        </ul>
+        <div class="nextBtn"><img src="images/icon01.png" alt=""></div>
+        <div class="preBtn"><img src="images/icon02.png" alt=""></div>
+    </div>
+</body>
+</html>

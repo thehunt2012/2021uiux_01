@@ -96,7 +96,7 @@ body{
 
 .visual{
     background-color: #213C6B;
-    background-image: url(images/main_bg01.jpg);
+    background-image: url(../images/main_bg01.jpg);
     background-repeat: no-repeat;
     background-position: center;
     height: 400px;

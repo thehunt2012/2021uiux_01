@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        .container{
+            width: 1200px; margin: 0 auto; 
+            color: #fff; text-shadow: 3px 5px 2px #000;}
+        .container img{width: 100%; display: block;}
+        .container h3:after{
+            content: ""; display: block;
+            width: 150px; height: 1px;
+            background-color: #fff;
+            margin: 8px auto;
+            box-shadow: 3px 5px 2px #000;;
+        }
+        .container ul li{
+            float: left;
+            width: calc((1200px - 60px) / 4);
+            margin-right: 20px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+        .container ul li:last-child{margin-right: 0;}
+        .container ul li:hover{
+            box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.3);
+        }
+        .container ul li .view{
+            position: absolute;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.3);
+            /* top: 100%; */
+            transition: 0.5s;
+        }
+        .container ul li:hover .view{top: 0;}
+
+        .container ul li:nth-child(1) .view{top: -100%;}
+        .container ul li:nth-child(2) .view{right: 100%;}
+        .container ul li:nth-child(3) .view{top: 100%;}
+        .container ul li:nth-child(4) .view{right: -100px;}
+
+        .container ul li:nth-child(1):hover .view{top: 0;}
+        .container ul li:nth-child(2):hover .view{right: 0;}
+        .container ul li:nth-child(3):hover .view{top: 0;}
+        .container ul li:nth-child(4):hover .view{right: 0;}
+
+        .container.circle li{border-radius: 50%;}
+
+
+        .t-center{text-align: center !important;}
+        .mb1{margin-bottom: 1rem !important;}
+        .mb2{margin-bottom: 2rem !important;}
+        .pt20{padding-top: 20px !important;}
+        .pb20{padding-bottom:20px !important;}
+        .color1{background-color: #666;}
+
+    </style>
+</head>
+<body>
+    <div class="colorWrap color1 pt20 pb20 mb2">
+        <div class="container">
+            <h3 class="t-center">GALLAY</h3>
+            <p class="t-center mb1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, voluptate.</p>
+            <ul class="clearfix">
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="view">test</div>
+                </li>
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="view">test</div>
+                </li>
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="view">test</div>
+                </li>
+                <li>
+                    <img src="../images/testimg.jpg" alt="">
+                    <div class="view">test</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container circle pt20 pb20 mb2">
+        <h3 class="t-center">GALLAY</h3>
+        <p class="t-center mb1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, voluptate.</p>
+        <ul class="clearfix">
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="view">test</div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="view">test</div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="view">test</div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="view">test</div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
