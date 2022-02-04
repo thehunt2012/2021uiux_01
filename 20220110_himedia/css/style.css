@@ -4,10 +4,16 @@ li{list-style:none;}
 .clearfix:after{content:"";display:block;clear:both;}
 img{display: block;}
 a:link,a:visited{color: black;text-decoration: none;}
-body{
-    font-family: 'Roboto', sans-serif;
-    min-width: 980px; /* 최소값 */
+
+@media screen and (min-width:721px){
+    body{
+        font-family: 'Roboto', sans-serif;
+        min-width:980px;
+    }
+
 }
+
+.logo_wrapper .toggle{display: none;}
 
 
 /* header start */
@@ -16,7 +22,8 @@ body{
 
 .util_wrapper{
     width: 980px;
-    margin: 0 auto;           
+    margin: 0 auto;
+    /* min-width: 980px; */
 }
 .util_wrapper>ul.util{
     float: right;
@@ -218,9 +225,9 @@ body{
 }
 .footerWrap .footerMenu li:first-child a{padding-left: 0;}
 
-.footerWrap .fooerBottom{width: 980px; margin: 0 auto; padding: 20px 0;}
-.footerWrap .fooerBottom h3{float: left; width: 120px; color: white; }
-.footerWrap .fooerBottom .fbRight{float: left; color: #a2a2a2; font-size: 12px; font-weight: bold;}
+.footerWrap .footerBottom{width: 980px; margin: 0 auto; padding: 20px 0;}
+.footerWrap .footerBottom h3{float: left; width: 120px; color: white; }
+.footerWrap .footerBottom .fbRight{float: left; color: #a2a2a2; font-size: 12px; font-weight: bold;}
 .footerWrap address{font-style: normal; color: #a2a2a2; font-size: 12px;}
 
 
