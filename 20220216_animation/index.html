@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         .box{
             width: 100px; height: 100px;
@@ -55,10 +56,31 @@
             to{bottom: 50px;}
         }
 
+        .boxmouse{font-size: 2em; color: aqua;}
+        .boxM{
+            background: pink; width: 200px; height: 50px;
+            border-radius: 5px;
+        }
+        .boxM a{
+            display: block; height: 50px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 14px;
+        }
+        .boxM a>i{margin-right: 0.5em; font-size: 18px;}
+        .boxM:hover{background: hotpink;}
+        .boxM:hover a{color: #fff;}
+
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <!-- <div class="box"></div> -->
+
     <div class="mouse"></div>
+
+    <div class="boxmouse"><i class="fas fa-mouse"></i></div>
+
+    <div class="boxM">
+        <a href="#"><i class="fas fas fa-ghost"></i> 제품소개</a>
+    </div>
 </body>
 </html>
