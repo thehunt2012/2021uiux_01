@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul class="box">
+
+    </ul>
+    <script>
+       var city =  ["seoul","busan","inchon","daegu","대전"];
+       var cLink = ["www.naver.com","www.daum.net","www.korea.com","www.dbcut.com","www.daum.net"]
+
+       var cnt = city.length;
+    document.write("<ul>");
+    for(var i=0;i<cnt;i++){
+        document.write("<li>");
+        //document.write("<a href='http://"+ cLink[i] + "'>" + city[i] + "</a>" );
+        document.write(`<a href="http://${cLink[i]}">${city[i]}</a>`)
+        document.write("</li>");
+    }
+    document.write("</ul>");
+
+    //문서조작
+    var html="";
+    for(var i=0;i<city.length;i++){
+        // html += "<li>";
+        // html += city[i];
+        // html += "</li>";
+
+        // html = html + "문장"
+        html += `
+                <li>
+                    <a href="http://${sLink[i]}">${city[i]}</a>
+                </li>
+                `
+    }
+
+    document.querySelector(".box").innerHTML = html;
+
+
+
+    </script>
+
+</body>
+</html>
