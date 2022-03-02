@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{display: flex; background: blue; flex-wrap: wrap;}
+        .container .item1{background:pink;}
+        .container .item2{background: skyblue;}
+        .container .item3{background: gray;}
+        .container .item4{background: gold;}
+        .container .item5{background: red;}
+        .container div{
+            flex-grow: 1;
+            /* flex:1 1 auto; */
+            flex-basis: 30%;
+            /* width: 50%; */
+        }
+
+        @media screen and (max-width:600px){
+            .container div{flex-basis: 50%;}
+        }
+
+        .container1{display: flex;}
+        .container1 .left{width: 200px; background: green; flex-shrink: 0;}
+        .container1 .content{flex:1; background: blue; display: flex; flex-wrap:wrap;}
+        .content div{width: 200px; height: 200px; flex: 1 1 30%;}
+        .content div:nth-child(2n){background: pink;}
+
+        @media screen and (max-width:600px){
+            .container1{flex-direction: column;}
+            .container1 .left{width: 100%;}
+            .content div{flex: 1 1 100%;}
+        }
+
+    </style>
+</head>
+<body>
+    <!-- <div class="container">
+        <div class="item1">aaa</div>
+        <div class="item2">bbb</div>
+        <div class="item3">ccc</div>
+        <div class="item4">ddd</div>
+        <div class="item5">ddd</div>
+    </div> -->
+
+    <div class="container1">
+        <div class="left">
+            메뉴
+        </div>
+        <div class="content">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+    </div>
+</body>
+</html>
