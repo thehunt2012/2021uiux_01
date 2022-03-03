@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        .toggle{
+            width: 50px; height: 50px; background: #000;
+            display: flex; justify-content: center; align-items: center;
+            cursor: pointer; position: relative; z-index: 1;
+        }
+        .toggle div{
+            width: 25px; height: 3px; background: #fff;
+            border-radius: 5px; position: absolute;
+            transition: 0.3s;
+        }
+        .toggle .bar1{transform: translateY(-10px);}
+        .toggle .bar3{transform: translateY(10px);}
+
+        .toggle.active .bar1{transform:translateY(0px) rotate(45deg);}
+        .toggle.active .bar2{opacity: 0;}
+        .toggle.active .bar3{transform:translateY(0px) rotate(-45deg);}
+
+        .menu{
+            width: 400px; height: 100%; background: #444;
+            position: absolute; top: 0; left: 0;
+            display: flex; justify-content: center; align-items: center;
+            font-size: 2em; left: -400px; transition: 0.5s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="toggle">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+    <div class="menu">
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+        </ul>
+    </div>
+
+    <script>
+        const toggleElem = document.querySelector(".toggle");
+        const menuElem = document.querySelector(".menu");
+        let chk = true;
+
+        document.querySelector(".toggle").addEventListener("click",function(){
+            if( chk == true ){
+                toggleElem.classList.add("active");
+                menuElem.style.left = "0"
+                chk = false;
+            }else{
+                toggleElem.classList.remove("active");
+                menuElem.style.left = "-400px"
+                chk = true;
+            }
+        });
+    </script>
+    
+</body>
+</html>

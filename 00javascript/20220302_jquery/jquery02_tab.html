@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        .tab{width: 500px; display: flex;}
+        .tab li{padding: 10px 20px; border: 1px solid #000; border-bottom: 0 none; cursor: pointer;}
+        .tab li.active{background: #333; color: #fff;}
+        .tab li:hover{background: #333; color: #fff;}
+        .content{width: 500px; padding: 16px; border: 1px solid #000;}
+        .content .tcon2{display: none;}
+        .content .tcon3{display: none;}
+
+    </style>
+</head>
+<body>
+    <ul class="tab">
+        <li class="active">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+    </ul>
+    <div class="content">
+        <div class="tcon1">
+            0.Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi cum illum eum nostrum ab, numquam quia nemo voluptates recusandae nihil.
+        </div>
+        <div class="tcon2">
+            1.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto totam magnam mollitia animi ipsam. Eligendi non quo soluta sed nemo!
+        </div>
+        <div class="tcon3">
+            2.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto totam magnam mollitia animi ipsam. Eligendi non quo soluta sed nemo!
+        </div>
+    </div>
+    <script>
+        // 1. 디자인
+        // 2. tab 클릭시 active 변경
+        // 3. 클릭시 전체 active를 제거하고 자신만 active추가
+        // 4. content > div 전체 hide() / tab(num) => 0 1 / content > div eq(0) show()
+
+        $(".tab li").click(function(){
+            console.log($(this).index());
+
+            var i = $(this).index();
+
+            $(".tab li").removeClass("active");
+            $(this).addClass("active");
+
+            $(".content div").hide().eq(i).show();
+        });
+
+    </script>
+</body>
+</html>

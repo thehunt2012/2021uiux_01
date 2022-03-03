@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box,.box1,.box2,.box3{width: 100px; height: 100px; background: skyblue;}
+        .box2{position: fixed; right: -100%; bottom: 0; transition: 0.3s;}
+        .box3{background: blue;}
+    </style>
+</head>
+<body>
+    <div class="box" 
+    onclick="this.style.background = 'red'"
+    onmouseout="this.style.background = 'skyblue'"
+    ></div>
+    <div class="box" 
+    onclick="this.style.background = 'red'"
+    onmouseout="this.style.background = 'skyblue'"
+    ></div>
+
+    <div class="box1" id="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+    <script>
+        // document.getElementsByClassName("box1")[0];
+        // document.querySelector(".box1") // document 전체에서 첫번째
+        // document.querySelectorAll(".box1")[0];
+        // $("#box.box1") jquery min 파일이 있어야함
+
+
+        const boxElem = document.querySelector(".box1");
+        const box2Elem = document.querySelector(".box2");
+
+
+        boxElem.onmouseover = over;
+        // boxElem.onclick = over;
+
+        function over(){
+            console.log("마우스오버됨1")
+            boxElem.style.backgroundColor = "blue";
+            boxElem.style.marginLeft = "10px";
+            box2Elem.style.right = "100px";
+        }
+
+        boxElem.onmouseout = out;
+        function out(){
+            boxElem.style.backgroundColor = "skyblue";
+            boxElem.style.marginLeft = "initial";
+            box2Elem.style.right = "-100%";
+        }
+
+        boxElem.onmouseenter = function(){
+            boxElem.style.border = "5px solid #000"          
+        };
+
+        boxElem.onmouseleave = function(){
+            boxElem.style.border = "initial"
+        }
+
+
+        const box3Elem = document.querySelector(".box3");
+
+        box3Elem.addEventListener("mouseover",function(){
+            box3Elem.style.backgroundColor = "yellow"
+        })
+        box3Elem.addEventListener("mouseout",function(){
+            box3Elem.style.backgroundColor = "blue"
+        })
+    </script>
+</body>
+</html>

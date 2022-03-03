@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+</head>
+<style>
+    .tab{width: 400px; display: flex;}
+    .tab li{padding: 10px 20px; border: 1px solid #000; border-bottom:0 none; cursor: pointer;}
+    .tab li.active{background: hotpink; color: #fff;}
+    .tab li:hover{background: hotpink; color: #fff;}
+    .content{width: 400px; padding: 15px; border: 1px solid #000;}
+    .content .tcon2{display: none;}
+    .content .tcon3{display: none;}
+    .content .tcon4{display: none;}
+    .content .tcon5{display: none;}
+</style>
+<body>
+    <ul class="tab">
+        <li class="active">tab1</li>
+        <li>tab2</li>
+        <li>tab3</li>
+        <li>tab4</li>
+        <li>tab5</li>
+    </ul>
+    <div class="content">
+        <div class="tcon1">
+            0.Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat, sit.
+        </div>
+        <div class="tcon2">
+            1.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui, molestias!
+        </div>
+        <div class="tcon3">
+            2.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, saepe!
+        </div>
+        <div class="tcon4">
+            3.Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, impedit.
+        </div>
+        <div class="tcon5">
+            4.Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, odio.
+        </div>
+    </div>
+    <script>
+        // 1. 디자인
+        // 2. tab 클릭시 active 변경
+        // 3. 클릭시 전체 active를 제거하고 자신만 active추가
+        // 4. content > div 전체 hide() / tab(num) => 0 1 / content > div eq(0) show()
+
+        $(".tab li").click(function(){
+            $(".tab li").removeClass("active");
+            $(this).addClass("active")
+            $(".content div").hide().eq($(this).index()).show();
+        });
+    </script>
+</body>
+</html>
