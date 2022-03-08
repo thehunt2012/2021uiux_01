@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <script src="../js/jquery-3.1.1.min.js"></script>
+
+    <style>
+        body{height:400vh;}
+        .bg-primary{background: skyblue;}
+        .container{
+            width: 1000px; margin: 0 auto;
+            display: flex; align-items: center;
+        }
+        .container h1{font-size: 20px;}
+        .container .gnb{margin-left: auto;}
+        .container .gnb > ul{display: flex; width: 600px;}
+        .container .gnb > ul > li{flex: 1;}
+        .container .gnb > ul > li > a{display: block; line-height: 50px; text-align: center;}
+        .container .gnb ul > li:hover{background: #ccc;}
+
+        /* toggle */
+
+        .toggle{
+            width: 50px; height: 40px; background: pink;
+            display: flex; justify-content: center; align-items: center;
+            cursor: pointer;
+        }
+        .toggle div{
+            width: 24px; height: 3px; background: #000;
+            border-radius: 5px; position: absolute;
+            transition: 0.5s;
+        }
+        .toggle .bar1{transform:translateY(-10px);}
+        .toggle .bar3{transform:translateY(10px);}
+
+        .toggle.active .bar1{transform:translateY(0px) rotate(45deg);}
+        .toggle.active .bar2{opacity: 0;}
+        .toggle.active .bar3{transform:translateY(0px) rotate(-45deg);}
+
+        .toggle{display: none;}
+
+        @media screen and (max-width:768px){
+            .container{width: 100%; height: 40px; padding: 0 16px;}
+            .toggle{
+                display: flex; position: fixed;
+                right: 16px; top: 0;
+            }
+
+            .container .gnb{
+                position: fixed; 
+                width: 100%; height: 100%; 
+                background: pink; 
+                display: flex; justify-content: center; align-items: center;
+                top: 0; left: -100%; transition: 0.3s;
+            }
+            .container .gnb > ul{display:block; width: 300px;}
+
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="container bg-primary">
+        <h1><a href="#">logo</a></h1>
+        <nav class="gnb">
+            <ul class="main">
+                <li><a href="#">home</a></li>
+                <li><a href="#">company</a></li>
+                <li><a href="#">product</a></li>
+                <li><a href="#">community</a></li>
+            </ul>
+        </nav>
+        <div class="toggle">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+
+    <script>
+
+        let chk = true;
+        $(".toggle").click(function(){
+
+            if( chk == true){
+                $(this).addClass("active");
+                console.log($(".gnb").css("left")) //getter
+                $(".gnb").css("left",0).css("background-color","hotpink");
+                // $(".gnb")
+                // .css({
+                //     left:0,
+                //     top:30,
+                //     "background-color":"hotpink"
+                // })
+                chk = false;
+            }else{
+                $(this).removeClass("active");
+                $(".gnb").css("left","-100%");
+                chk = true;
+            }
+        })
+
+        $(window).resize(function(){
+            $(".toggle").removeClass("active")
+            $(".gnb").removeAttr("style")
+        })
+    </script>
+</body>
+</html>
