@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+#gallery{width: 824px;margin: 30px auto;background: pink;}
+#image{width: 760px;margin: 0 auto;margin-bottom: 10px;}
+#image p{display: none;}
+
+#thumbnail{
+    background: skyblue;display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#thumbnail .thumb{width: 760px; overflow: hidden;}
+#thumbnail .thumb ul{width: 2280px; position: relative; left: 0; transition: 0.3s;}
+#thumbnail .thumb li{float: left;margin-left: 8px;}
+
+#thumbnail .left,
+#thumbnail .right{
+    width: 32px;height: 75px; _background: blue;cursor: pointer;
+    display: flex;justify-content: center;
+    align-items: center; z-index: 1;
+}
+
+
+/* common  */
+.ml0{margin-left: 0 !important;}
