@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <style>
+        :root{
+            --primary:red;
+            --color1:#ff1000;
+            --color2:#ff00ff;
+        }
+        @media  screen and (min-width:1400px){
+            .container{max-width: 1200px;}
+        }
+        .container{
+            /* background-color: var(--bs-teal); */
+        }
+        .bg-teal{background-color: var(--bs-teal);}
+    </style>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="bg-light">
+        <div class="container">
+            <nav class="navbar navbar-expand-xl navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">Navbar</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo2" aria-controls="navbarTogglerDemo2" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarTogglerDemo2">
+                    <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+              </nav>
+        </div>
+    </div>
+
+    <div class="container-fluid px-0">
+        <img src="../images/pc01.jpg" alt="" class="img-fluid w-100">
+    </div>
+
+    <div class="bg-dark py-3">
+        <div class="container bg-dark py-3">
+            <h4 class="text-white text-center mb-3">title</h4>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3  d-flex justify-content-center">
+                    <div class="box d-flex flex-row align-items-center flex-sm-column">
+                        <img src="../images/testimg.jpg" alt="" class="w-100 mb-2 rounded">
+                        <p class="text-white">Lorem ipsum dolor sit amet.</p>
+                        <a href="#" class="btn btn-primary btn-sm">BUTTON</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 bg-dark d-flex justify-content-center">
+                    <div class="box">
+                        <img src="../images/testimg.jpg" alt="" class="w-100 mb-2">
+                        <p class="text-white">Lorem ipsum dolor sit amet.</p>
+                        <a href="#" class="btn btn-primary btn-sm">BUTTON</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 bg-dark d-flex justify-content-center">
+                    <div class="box">
+                        <img src="../images/testimg.jpg" alt="" class="w-100 mb-2">
+                        <p class="text-white">Lorem ipsum dolor sit amet.</p>
+                        <a href="#" class="btn btn-primary btn-sm">BUTTON</a>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 bg-dark d-flex justify-content-center">
+                    <div class="box">
+                        <img src="../images/testimg.jpg" alt="" class="w-100 mb-2">
+                        <p class="text-white">Lorem ipsum dolor sit amet.</p>
+                        <a href="#" class="btn btn-primary btn-sm">BUTTON</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="btn btn-info">button</div>
+    <div class="btn btn-outline-primary">button</div>
+    <a class="btn btn-outline-danger btn-sm">button</a>
+    <a class="btn btn-outline-danger btn-lg">button</a> -->
+</body>
+</html>
