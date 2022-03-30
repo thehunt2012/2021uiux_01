@@ -1,4 +1,5 @@
 @charset "utf-8";
+ul,li{list-style: none; margin: 0; padding: 0;}
 
 :root{
     --bg-color1 : #4458cc;
@@ -30,7 +31,20 @@
     margin: 15px auto;
 }
 
+.com .owl-item{padding: 30px; _background: red; transition: 0.3s; opacity: 0.5;}
+.com .owl-item.center{padding: 0px; _background: red; opacity: 1;}
+
+footer .icon li{
+    width: 45px; height: 45px; border-radius: 50%; background: #fff;
+    display: flex; justify-content: center; align-items: center;
+    margin: 0 5px;
+}
+        
 
 @media screen and (max-width:568px){
     .content-1s .card img{height: 100px;}
+}
+
+@media screen and (min-width:600px){
+    .customer .sliderView{flex-direction: column;}
 }
