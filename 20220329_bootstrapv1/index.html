@@ -299,15 +299,15 @@
         });
 
         const lazyLoad = document.querySelectorAll(".lazy-load");  // 모든 이미지 파일 선택
-        window.addEventListener("scroll",(event) => {
-        lazyLoad.forEach((view) => { // 각 이미지마다
-            console.log("Scrolling...");
-            const rect = view.getBoundingClientRect().top;
-            if(rect <= window.innerHeight){ // 이미지가 보일 타이밍을 계산
-                view.classList.add("fade"); // 트랜지션 추가
-            }
-        });
-        })
+            window.addEventListener("scroll", (event) => {
+                lazyLoad.forEach((view) => { // 각 이미지마다
+                    // console.log("Scrolling...");
+                    const rect = view.getBoundingClientRect().top;
+                    if (rect <= window.innerHeight) { // 이미지가 보일 타이밍을 계산
+                        view.classList.add("fade"); // 트랜지션 추가
+                    }
+                });
+            })
 
     </script>
 
