@@ -19,3 +19,35 @@
 }
 .bg-banner1{background-color: #02B3E4 !important;}
 .bg-banner2{background-color: #00CCCC !important;}
+
+.banner .card{
+    border-radius: 10px; overflow: hidden;
+    box-shadow: var(--box-shadow1)
+}
+
+.advan .icon{
+    width: 80px; height: 80px;
+    border-radius: 50%; background: #fff;
+    box-shadow: var(--box-shadow1)
+}
+.advan .img-view{height: 400px;}
+.advan .img-view img{border-radius: 5px; box-shadow: var(--box-shadow1)}
+.advan .img1st{max-width: 400px; right: 2rem; top: 1.5rem;}
+.advan .img2nd{max-width: 300px; left: 2rem; bottom: 1.5rem;}
+
+.contact{
+    background: url(../images/contact-cover.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.lazy-load{transform: translateY(100px); opacity: 0; transition:1s;}
+.lazy-load.fade{transform: translateY(0); opacity: 1;}
+
+@media screen and (max-width:990px) {
+    .advan .img1st{max-width: 300px; right: 2rem; top: 1.5rem;}
+    .advan .img2nd{max-width: 200px; left: -1rem; bottom: 7rem;}
+}
+@media screen and (max-width:768px){
+    .advan .img1st{max-width: 400px; right: 2rem; top: 1.5rem;}
+    .advan .img2nd{max-width: 300px; left: 2rem; bottom: 1.5rem;}
+}
