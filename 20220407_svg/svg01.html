@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .cir01 {
+            fill: #fff;
+            stroke: #000000;
+            stroke-width: 2;
+            stroke-dasharray: 362;
+            stroke-dashoffset: 362;
+            animation: circle 1s alternate linear forwards;
+            transform: scaleY(0); transform-origin: center;
+        }
+
+        @keyframes circle {
+            /* from{stroke-dashoffset: 0;} */
+            to{stroke-dashoffset: 0; fill: #ff0; transform: scaleY(1);}
+        }
+
+        .box,.box1{width: 300px; height: 300px; background: orange;}
+
+        .line1 {
+            fill: #00f;
+            stroke: #fff;
+            stroke-width: 50;
+            _stroke-linecap: round;
+            stroke-dasharray: 362;
+            stroke-dashoffset: 362;
+            animation: lineAni 1s alternate forwards;
+        }
+
+        @keyframes lineAni {
+            to{stroke-dashoffset: 280;}
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <svg id="Layer_1" x="0px" y="0px" viewBox="0 0 200 200">
+            <circle class="cir01" cx="100" cy="100" r="57.7" />
+        </svg>
+    </div>
+    <div class="box1">
+        <svg x="0px"y="0px" viewBox="0 0 200 200">
+            <path class="line1" d="M157.7,100c0,31.8-25.8,57.7-57.7,57.7S42.3,131.8,42.3,100S68.2,42.3,100,42.3c14.3,0,27.3,5.2,37.4,13.8
+        	c2.6,2.2,5,4.6,7.1,7.3C152.7,73.3,157.7,86.1,157.7,100z" />
+        </svg>
+    </div>
+</body>
+</html>
