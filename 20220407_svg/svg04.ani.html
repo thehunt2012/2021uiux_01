@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style type="text/css">
+        .box{width: 400px; height: 400px;}
+        .st0 {
+            fill: none;
+            stroke: #101670;
+            stroke-dasharray: 459;
+            stroke-dashoffset: 459;
+            /* animation: lineAni 2s alternate forwards; */
+        }
+        @keyframes lineAni {
+            to{stroke-dashoffset: 0;}
+        }
+
+        .box.on .st0{
+            animation: lineAni 2s alternate forwards;
+        }
+        .box.on .line2{animation-delay: 0.2s;}
+        .box.on .line3{animation-delay: 0.4s;}
+        .box.on .line4{animation-delay: 0.6s;}
+        .box.on .line5{animation-delay: 0.8s;}
+        .box.on .line6{animation-delay: 1s;}
+        .box.on .line7{animation-delay: 1.2s;}
+        .box.on .line8{animation-delay: 1.4s;}
+        .box.on .line9{animation-delay: 1.6s;}
+        .box.on .line10{animation-delay: 1.8s;}
+        .box.on .line11{animation-delay: 2s;}
+    </style>
+
+<body>
+    <div style="height: 1000px;"></div>
+
+    <div class="box">
+        <svg id="Layer_1" x="0px" y="0px" viewBox="0 0 400 400">
+            <g>
+                <path class="st0 line1" d="M56.5,60.5c0,0-38.5,106.5,147.5,137S341,341,341,341" />
+                <path class="st0 line2" d="M63.1,57.7c0,0-30.2,96,138.9,140s132.6,144,132.6,144" />
+                <path class="st0 line3" d="M69.8,55c0,0-22,85.5,130.2,142.9s128.1,144.4,128.1,144.4" />
+                <path class="st0 line4" d="M76.4,52.2c0,0-13.7,75,121.6,145.9S321.7,343,321.7,343" />
+                <path class="st0 line5" d="M83.1,49.5c0,0-5.5,64.6,112.9,148.9s119.3,145.4,119.3,145.4" />
+                <path class="st0 line6" d="M89.8,46.7c0,0,2.8,54.1,104.3,151.9s114.9,145.8,114.9,145.8" />
+                <path class="st0 line7" d="M96.4,44c0,0,11,43.6,95.7,154.8s110.4,146.3,110.4,146.3" />
+                <path class="st0 line8" d="M103.1,41.2c0,0,19.3,33.1,87,157.8s106,146.8,106,146.8" />
+                <path class="st0 line9" d="M109.7,38.4c0,0,27.5,22.6,78.4,160.8s101.6,147.2,101.6,147.2" />
+                <path class="st0 line10" d="M116.4,35.7c0,0,35.8,12.1,69.7,163.7s97.2,147.7,97.2,147.7" />
+                <path class="st0 line11" d="M123,32.9c0,0,44,1.7,61.1,166.7s92.7,148.1,92.7,148.1" />
+            </g>
+        </svg>
+    </div>
+
+    <script>
+        const line = document.querySelectorAll(".box path")
+        const lineLength = line.length;
+        for(let i=0;i<lineLength;i++){
+            const totalLength = line[i].getTotalLength();
+            console.log(totalLength)
+        };
+
+
+        window.addEventListener("scroll",function(){
+           console.log(window.pageYOffset)
+           if(window.pageYOffset > 500){
+               document.querySelector(".box").classList.add("on");
+           }else{
+            document.querySelector(".box").classList.remove("on");
+           }
+        });
+    </script>
+</body>
+
+</html>
