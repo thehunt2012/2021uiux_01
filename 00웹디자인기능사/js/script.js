@@ -27,15 +27,30 @@ $(".menu > li").mouseout(function(){
 // }
 // setInterval(slideLeft,3000);
 
-/* slide up */
+// slide up
+// let num = 0;
+// function slideUp(){
+//     num++;
+//     if(num == 4){
+//         num=1;
+//         $(".slide").css("top",0)
+//     }
+//     console.log(num)
+//     $(".slide").animate({"top":-100*num+"%"},1000)
+// }
+// setInterval(slideUp,3000)
+
+// slide fade
 let num = 0;
-function slideUp(){
-    num++;
-    if(num == 4){
-        num=1;
-        $(".slide").css("top",0)
+let depth = 0;
+function slideFade(){
+        num++;
+        depth++;
+        if(num == 4){
+            num=1;
+        }
+        console.log(num)
+        $(".slide .slide_item").eq(num).css({opacity:0, "z-index":depth})
+        $(".slide .slide_item").eq(num).stop().animate({opacity:1},1000)
     }
-    console.log(num)
-    $(".slide").animate({"top":-100*num+"%"},1000)
-}
-setInterval(slideUp,3000)
+setInterval(slideFade,3000)
