@@ -54,3 +54,14 @@ function slideFade(){
         $(".slide .slide_item").eq(num).stop().animate({opacity:1},1000)
     }
 setInterval(slideFade,3000)
+
+// tab menu
+$(".tab > div").click(function(e){
+    e.preventDefait
+    let i = $(this).index()
+    console.log("tab = " +i);
+    $(".tab > div").removeClass("active");
+    $(this).addClass("active")
+
+    $(".content > ul").hide().eq(i).fadeIn()
+});
