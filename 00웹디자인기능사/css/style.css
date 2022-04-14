@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+html,body{height: 100%;}
 *{margin: 0; padding: 0; box-sizing: border-box;}
 li{list-style: none;}
 a:link,a:visited{text-decoration: none; color: #333;}
@@ -10,7 +11,7 @@ a:link,a:visited{text-decoration: none; color: #333;}
 #header{
     height: 100px; padding: 30px 0; 
     padding-right: 20px; background: #ccc; 
-    position: relative; z-index: 9999;
+    position: relative; z-index: 999;
 }
 #header h1.logo{
     width: 200px; height: 40px; 
@@ -37,8 +38,8 @@ a:link,a:visited{text-decoration: none; color: #333;}
     display: flex; justify-content: center; align-items: center; 
     width: 1200px;
 }
-#slider .slide .slide_item h2
-{position: absolute; background: pink; 
+#slider .slide .slide_item h2{
+    position: absolute; background: pink; 
     padding: 10px 30px; border-radius: 10px;
 }
 #slider .slide .slide_item img{width: 100%;} */
@@ -70,7 +71,7 @@ a:link,a:visited{text-decoration: none; color: #333;}
 #slider .slide .slide_item img{width: 100%;}
 
 
-#contents div{float: left; width: calc( 100% / 3 );}
+#contents > div{float: left; width: calc( 100% / 3 );}
 
 #contents .content ul{display: none;}
 #contents .content ul:nth-child(1){display: block;}
@@ -79,12 +80,13 @@ a:link,a:visited{text-decoration: none; color: #333;}
 #contents .tab{margin-bottom: 20px;}
 #contents .tab > div{
     float: left; padding: 10px 15px; cursor: pointer;
-    border: 1px solid gray; border-left:  0 none;
+    border: 1px solid gray; border-left: 0 none;
     background: white;
 }
 #contents .tab > div:nth-child(1){border-left: 1px solid gray;}
 #contents .tab > div.active{background: gray;}
 #contents .tab > div.active a{color: #fff;}
+
 #contents .notice li{position: relative; margin-bottom: 15px;}
 #contents .notice li a{
     display: block; width: 250px;
@@ -98,11 +100,47 @@ a:link,a:visited{text-decoration: none; color: #333;}
     width: 3px; height: 3px;
     background: #000;
     left: 0; top: calc(50% - 1px); border-radius: 50%;
-    font-size: 5px;
 }
-#contents .notice li span{position: absolute; right: 0;}
+#contents .notice li span{position: absolute; right: 0; top: 0;}
 
 #contents .gall{padding: 10px 0;}
 #contents .gall li img{width: 100%; display: block;}
 #contents .gall li{float: left; width: calc( ( 100% - 20px ) / 3 ); margin-right: 10px;}
 #contents .gall li:last-child{margin-right: 0;}
+
+#contents .cont2{position: relative;}
+#contents .cont2 img{display: block;}
+#contents .cont2 h3{
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    background: skyblue; padding: 10px 20px;
+}
+#contents .cont3{position: relative;}
+#contents .cont3 a{display: block;}
+#contents .cont3 img{display: block;}
+#contents .cont3 h3{
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);
+    background: skyblue; padding: 10px 20px;
+}
+
+.popView{
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    position: fixed; top: 0; left: 0;
+    z-index: 9999;
+    /* display: flex; justify-content: center; align-items: center; */
+    display: none;
+}
+.popView .container{
+    width: 500px; height: 300px;
+    background: white;
+    padding: 20px;
+    position: absolute;
+    left: 50%; top: 50%; transform: translate(-50%,-50%);
+}
+.popView .container .close{
+    background: skyblue;
+    position: absolute;
+    padding: 5px 15px;
+    cursor: pointer;
+    right: 20px; bottom: 20px;
+}
