@@ -50,18 +50,26 @@ function slideFade(){
             num=1;
         }
         console.log(num)
-        $(".slide .slide_item").eq(num).css({opacity:0, "z-index":depth})
         $(".slide .slide_item").eq(num).stop().animate({opacity:1},1000)
     }
 setInterval(slideFade,3000)
 
 // tab menu
 $(".tab > div").click(function(e){
-    e.preventDefait
+    e.preventDefault();
     let i = $(this).index()
     console.log("tab = " +i);
     $(".tab > div").removeClass("active");
     $(this).addClass("active")
 
-    $(".content > ul").hide().eq(i).fadeIn()
+    $(".content > ul").hide().eq(i).fadeIn();
 });
+
+// popups
+$(".popup").click(function(e){
+    e.preventDefault();
+    $(".popView").fadeIn()
+});
+$(".close").click(function(){
+    $(".popView").fadeOut()
+}); //show, hide로도 사용
