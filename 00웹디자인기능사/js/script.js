@@ -1,3 +1,4 @@
+// menu
 $(".menu > li").mouseover(function(){
     $(this).children("a").css("background","orange")
     $(this).find(".submenu").stop().slideDown(200);
@@ -65,7 +66,7 @@ $(".tab > div").click(function(e){
     $(".content > ul").hide().eq(i).fadeIn();
 });
 
-// popups
+// popup
 $(".popup").click(function(e){
     e.preventDefault();
     $(".popView").fadeIn()
