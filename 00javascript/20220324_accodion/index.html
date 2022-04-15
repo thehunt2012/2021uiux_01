@@ -67,15 +67,14 @@
         menuElem.click(function(e){
             e.preventDefault();
 
-            menuElem.parent().find(".submenu").slideUp();
-
-            if($(this).hasClass("active")){
-                $(this).parent().find(".submenu").slideUp();
-                $(this).removeClass("active")
-            }else{
-                $(this).parent().find(".submenu").slideDown();
-                menuElem.removeClass("active")
-                $(this).addClass("active")
+            menuElem.parent().find(".submenu").slideUp(); //5
+            if($(this).hasClass("active")){ //2
+                $(this).parent().find(".submenu").slideUp(); //3
+                $(this).removeClass("active") //3
+            }else{ //2
+                $(this).parent().find(".submenu").slideDown(); //1
+                menuElem.removeClass("active") //4
+                $(this).addClass("active") //1
             }
 
         })

@@ -6,7 +6,8 @@
     #header{top:0;z-index: 99999;}
     #header .lang{position: fixed;right: 16px;bottom: 16px;display: none;}
     #header .navbarWrap{width: 100%;padding:0 20px}
-    #header .navbar{
+    #header .navbar{display: none;}
+    #header .moMenu{
         position: fixed;margin:initial;
         width: 70%;height: 100%;
         background: #eee;
@@ -14,13 +15,14 @@
         display: flex;justify-content: center;align-items: center;
         z-index: 11; box-shadow: 0 0 20px rgba(0,0,0,0.7);
     }
-    
-    #header .navbar ul{
+    /* #header .navbar ul{
         display: block;width:80%;
     }
     #header .navbar li{width: 100%;font-weight: bold;}
     #header .navbar li:after{display: none;}
-    #header .navbar li a{color:#666;font-size:20px}
+    #header .navbar li a{color:#666;font-size:20px} */
+
+
 
     .overLayer{
         width: 100%; height: 100%;

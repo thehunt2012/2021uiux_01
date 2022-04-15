@@ -21,8 +21,9 @@
     transform:scaleX(0);
 }
 #header .navbar li:hover:after{transform:scaleX(1)}
-
 #header .navbar li a{height: 40px;display: flex;justify-content: center;align-items: center;}
+
+#header .moMenu{display: none;}
 
 
 #header .lang{display: flex;width: 80px;}
@@ -33,7 +34,6 @@
     border: 1px solid #f00;margin-left: -1px;
     background: #fff;font-size: 14px;color:#f00;font-weight: bold;cursor: pointer;
 }
-
 #header .lang .active{background: #f00;color:white}
 
 
