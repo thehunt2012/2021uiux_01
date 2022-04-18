@@ -1,0 +1,27 @@
+@charset "utf-8";
+html,body{height: 100%;}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+.clearfix:after{content: ""; display: block; clear: both;}
+a:visited,a:link{text-decoration: none; color:#000}
+
+.wrap{width: 1200px; margin: 0 auto;}
+
+/* header */
+#header{
+    background: lightgreen; height: 100px;
+    padding: 30px; z-index: 999; position: relative;
+}
+#header .logo{
+    background: #fff; width: 200px; height: 40px; 
+    float: left; text-align: center;
+}
+#header .nav{float: right;}
+#header .main > li{
+    float: left; width: 150px;
+    background: #eee;
+}
+#header .main > li > a{display: block; line-height: 40px; text-align: center;}
+#header .main > li > a:hover{background: #2ccc2c; color: #fff;}
+#header .main > li:hover a{color: #fff;}
+#header .main .sub{background: #3c6445; width: 100%;}
