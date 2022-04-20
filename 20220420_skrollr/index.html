@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js" integrity="sha512-A2+khatRDWHUE2VUtN4xUTkr1nc4YfDBw9Sg3ea6x0aRPfpcYieDZji4D2edDHy/yF5NsYzP7kL8sSM8s5EqCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        body{height: 500vh; background: skyblue;}
+        .box{position: fixed; color: #fff; padding: 15px; z-index: 1;}
+
+        #scene_1st{
+            height: 300vh; position: relative;
+            background: #000 url(img/bg/space_stars_static.svg);
+        }
+        .man{
+            position: fixed; left: 50%; top: 50%; 
+            transform: translate(-50%,-50%);
+        }
+
+        .txt{
+            width: 200px; background: #fff; 
+            padding: 20px; border-radius: 10px;
+            position: absolute;
+        }
+        .txt.B1{left: 15%; top: 1000px;}
+        .txt.B2{right: 15%; top: 1500px;}
+
+        .container{
+            position: absolute;
+            width: 1000px; padding: 20px;
+            top: 2000px; left: 50%;
+            background: #fff; border-radius: 10px;
+        }
+
+        @media screen and (max-width:700px){
+            #scene_1st .txt{
+                width: 400px;
+                position: fixed; 
+                bottom: 50px; top: initial;
+                left: 50%; margin-left: -200px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        현재위치 : <span class="scrollY">0</span> <br>
+        스크롤높이 : <span class="scrollHeight">0</span>
+    </div>
+    <section id="scene_1st">
+        <div class="man"
+        data-0="transform:translate(-50%,-50%) scale(0) rotate(180deg)"
+        data-190="transform:translate(-50%,-50%) scale(1.3) rotate(0deg)"
+        data-200="transform:translate(-50%,-50%) scale(1) rotate(0deg)"
+        >
+            <img src="img/char/character_astronaut.svg" alt="" 
+            data-0="display:block"
+            data-400="display:none"
+            >
+            <img src="img/char/character_astronaut_drift.svg" alt=""
+            data-0="display:none"
+            data-400="display:block"
+            data-800="display:none"
+            >
+            <img src="img/char/character_astronaut_excited.svg" alt=""
+            data-0="display:none"
+            data-800="display:block"
+            data-1779="display:block"
+            data-1780="display:none"
+            >
+            <img src="img/char/character_astronaut_guitar.svg" alt=""
+            data-1779="display:none"
+            data-1780="display:block"
+            >
+        </div>
+
+        <div class="txt B1" 
+        data-0="opacity:0"
+        data-400="opacity:0"
+        data-500="opacity:1"
+        data-800="opacity:1"
+        data-900="opacity:0"
+        >
+            <p>1.Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Reprehenderit natus in facilis eum adipisci quibusdam recusandae labore, 
+            tempore ea vero.</p>
+        </div>
+        <div class="txt B2"
+        data-0="opacity:0"
+        data-900="opacity:0"
+        data-1000="opacity:1"
+        data-1300="opacity:1"
+        data-1400="opacity:0"
+        >
+            <p>2.Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+            Reprehenderit natus in facilis eum adipisci quibusdam recusandae labore, 
+            tempore ea vero.</p>
+        </div>
+
+        <div class="container"
+        data-1200="width:1000px; transform:translateX(-50%)"
+        data-1500="width:1300px; transform:translateX(-50%)"
+        >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat vel earum alias quas temporibus repellendus illum unde
+            aspernatur a, eveniet, ratione sapiente deserunt animi commodi nostrum, doloremque culpa esse harum corporis? Impedit
+            sunt laborum neque hic debitis praesentium quas id nesciunt possimus blanditiis, consequatur eum corrupti soluta eaque
+            minus unde, at vero doloribus laboriosam? Repellendus optio consequatur perspiciatis doloremque libero dolore officia,
+            aut cupiditate aliquid, harum quia aperiam fugit alias pariatur. Cum, officiis a aspernatur in, repellat iste porro
+            repudiandae recusandae reiciendis dolorem tempore maxime obcaecati pariatur iure maiores cupiditate, voluptate nostrum
+            ipsum! Culpa, ipsum at quos vero aut totam, modi nesciunt similique maxime quasi ducimus magni adipisci eum incidunt
+            numquam labore hic sunt nam optio tempore dicta eos temporibus laudantium repudiandae. Assumenda exercitationem odit,
+            illum vitae pariatur debitis nemo perferendis autem mollitia voluptates! Ea repudiandae adipisci iure sint nihil,
+            quibusdam distinctio dicta possimus at incidunt laboriosam consectetur maiores labore unde saepe accusantium non nostrum
+            veniam qui impedit nulla omnis laborum! Veniam cumque, adipisci ullam dolores nemo, unde repellendus accusamus earum
+            excepturi fuga laudantium corporis veritatis placeat ipsum. Sunt esse ex corporis nam aliquam voluptate, reiciendis
+            minima quae aspernatur, reprehenderit ipsam nesciunt porro iusto asperiores. Reprehenderit consequatur facilis corrupti
+            voluptatem!
+        </div>
+    </section>
+
+
+    <script>
+        skrollr.init();
+
+        window.addEventListener("scroll",function(){
+            let scrollY = window.pageYOffset;
+            let wHeight = document.body.offsetHeight - window.innerHeight;
+
+            document.querySelector(".scrollY").innerHTML = scrollY;
+            document.querySelector(".scrollHeight").innerHTML = wHeight;
+        })
+    </script>
+</body>
+</html>
