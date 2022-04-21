@@ -44,15 +44,15 @@ $(".menu > li").mouseout(function(){
 // slide fade
 let num = 0;
 let depth = 0;
-function slideFade(){
-        num++;
-        depth++;
-        if(num == 4){
-            num=1;
-        }
-        console.log(num)
-        $(".slide .slide_item").eq(num).stop().animate({opacity:1},1000)
+function slideFade() {
+    num++;
+    depth++;
+    if (num == 4) {
+        num = 1;
     }
+    console.log(num)
+    $(".slide .slide_item").eq(num).stop().animate({ opacity: 1 }, 1000)
+}
 setInterval(slideFade,3000)
 
 // tab menu

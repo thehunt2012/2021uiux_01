@@ -1,0 +1,201 @@
+@charset "utf-8";
+html,body{height: 100%;}
+*{margin: 0; padding: 0; box-sizing: border-box;}
+li{list-style: none;}
+.clearfix:after{content: ""; display: block; clear: both;}
+a:visited,a:link{text-decoration: none; color:#000}
+
+.wrap{width: 1200px; margin: 0 auto;}
+
+/* menu01 */
+#header{
+    background: lightgreen; height: 100px;
+    padding: 30px; z-index: 999; position: relative;
+    display: flex; justify-content: space-between; align-items: center;
+}
+#header .logo{
+    background: #fff; width: 200px; height: 40px; 
+    text-align: center;
+}
+
+.mainMenu {
+    width: 600px;/*서브메뉴랑 동일하게*/
+    _height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;/*subMenu때문에 반드시 필요*/
+}
+
+.mainMenu>a {
+    width: 25%;
+    line-height: 40px;
+    _padding: 20px 0;
+    text-align: center;
+}
+
+.mainMenu>a:hover {
+    background: green;
+    color: #ffffff;
+}
+
+.subMenu {
+    width: 600px;/*메인메뉴 위치랑 동일하게*/
+    display: flex;
+    justify-content: space-between;
+    background: #64b164;
+    position: absolute;
+    right: 0;
+    top: 40px;/*header 높이 만큼 내려옴*/
+    z-index: 1;
+}
+.subMenu>ul {
+    width: 25%;
+}
+.subMenu>ul>li>a {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    color: #000;
+}
+.subMenu>ul>li>a:hover {
+    background: rgb(38, 63, 44);
+    color: #ffffff;
+}
+
+/* menu02 */
+#header-02{
+    background: orange; height: 100px; padding: 30px;
+    display: flex; justify-content: space-between; align-items: center;
+}
+#header-02 .logo{
+    width: 200px; height: 40px; background: #fff; text-align: center;
+}
+/*메인메뉴*/
+.mainMenu-02 {
+    width: 600px;
+    height:100%;
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+.mainMenu-02>a {
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    color: #333333;
+    font-weight: bold;
+}
+
+.mainMenu-02>a:hover {
+    background: #ffffff;
+}
+
+/*서브메뉴*/
+.subMenu-02 {
+    width: 1200px;
+    display: flex;
+    justify-content: flex-end;
+    background: #222222;
+    position: absolute;
+    z-index: 1;
+    padding: 30px;
+}
+
+.subMenuWrap {
+    width: 600px;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.subMenuWrap>ul {
+    width: 100%;
+}
+
+.subMenuWrap>ul>li>a {
+    text-align: center;
+    display: block;
+    padding: 8px 0;
+    color: #fff;
+}
+
+.subMenuWrap>ul>li>a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffc000;
+}
+
+
+.wrap-02{width: 1000px; margin: 0 auto;}
+/* menu03 */
+#header-03 {
+    width: 200px;
+    height: 650px;
+    background: pink;
+    padding: 25px;
+}
+#header-03 .logo{
+    width: 150px; height: 40px; 
+    background: #fff; text-align: center;
+    margin-bottom: 25px;
+}
+.main > li > a {
+	display: block; text-align: center;
+    padding:10px 0;
+	font-weight:bold;
+	background-color:hotpink;
+	color:#fff;
+}
+.main > li > a:hover{
+	background-color:#f6b62c;
+	color:#222328;
+}
+.subMenu-03{width:100%;	display:none;}
+.subMenu-03 > li > a{
+	display: block; text-align: center;
+	padding:10px 0;
+	font-size:14px;
+	font-weight:bold;
+	background:#666666;
+	color:#ffffff;
+}
+.subMenu-03 > li > a:hover{
+	background-color:#777777;
+	color: #f6b62c;
+}
+/* menu04 */
+#header-04{
+    width: 200px; height: 650px;
+    background: skyblue;
+    padding: 25px; position: relative;
+}
+#header-04 .logo{
+    background: #fff;
+    width: 150px; height: 40px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.main-02 > li{position: relative;}
+.main-02 > li > a{
+    display: block; text-align: center;
+    padding: 10px 0;
+    background: blue;
+    color: #fff;
+}
+.main-02 > li > a:hover{
+    background: #fff; color: #000;
+}
+.subMenu-04{
+    position: absolute;
+    top: 0; left: 150px;
+    width: 200px;
+    display: none;
+}
+.subMenu-04 > li > a{
+    display: block; text-align: center;
+    padding: 10px 0;
+    background: #2961aa; color: #fff;
+}
+.subMenu-04 > li > a:hover{
+    background: navy;
+}
