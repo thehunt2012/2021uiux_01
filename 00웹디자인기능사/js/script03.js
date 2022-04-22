@@ -15,7 +15,7 @@ function slideFade(){
         num = 1;
     }
     console.log(num)
-    $(".sliderWrap .slider").eq(num).stop().animate({opacity: 1},1000)
+    $(".sliderWrap .slider").eq(num).css({opacity:0,"z-index":depth}).stop().animate({opacity: 1},1000)
 }
 setInterval(slideFade,3000)
 
@@ -27,4 +27,13 @@ $(".tab > div").click(function(e){
     $(this).addClass("active");
 
     $(".content > ul").hide().eq(i).fadeIn();
+})
+
+//popup
+$(".popup").click(function(e){
+    e.preventDefault();
+    $(".background").fadeIn();
+});
+$(".close").click(function(){
+    $(".background").fadeOut();
 })

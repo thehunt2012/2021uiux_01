@@ -9,101 +9,42 @@ a:link,a:visited{text-decoration: none; color: #111111;}
 
 /* header */
 #header{
-    background: pink; height: 100px; padding: 30px;
+    background: #ddd; height: 100px;
+    padding: 30px;
     display: flex; justify-content: space-between; align-items: center;
-    z-index: 1; position: relative;
 }
 #header .logo{
-    background: #fff; text-align: center;
-    width: 200px; height: 40px;
+    background: #fff; width: 200px; height: 40px;
+    text-align: center;
 }
-#nav .main{
-    width: 600px; position: relative;
+.main{
+    width: 600px; height: 100%;
     display: flex; justify-content: space-between; align-items: center;
 }
-#nav .main li{background: orange; width: 150px;}
-#nav .main li{line-height: 40px; display: block; text-align: center;}
-#nav .main li > a{display: block;}
-#nav .main li > a:hover{background: #fff;}
-
-#nav .sub{display: none; position: absolute; top: 40px;}
-#nav .sub li{background: lightcoral;}
-
-/* slide */
-#slide{position: relative; width: 1200px; height: 480px;}
-#slide .sliderWrap{position: absolute; top: 0;}
-#slide .sliderWrap .slider{
-    display: flex; justify-content: center; align-items: center;
-    position: absolute; width: 1200px;
+.main a{
+    width: 100%; text-align: center;
+    line-height: 50px;
 }
-#slide .sliderWrap .slider h2{
+.main a:hover{
+    background: #444; color: #fff;
+}
+
+.sub{
+    width: 1200px; background: #bbb3b3; padding: 30px;
     position: absolute;
-    font-size: 36px; color: #fff;
+    display: flex;
+    justify-content: flex-end;
 }
-#slide .sliderWrap .slider img{width: 100%;}
-
-/* tab */
-#contents > div{float: left; width: calc(100% / 3); height: 239px;}
-#contents .cont1{background: lightpink; padding: 20px;}
-#contents .content ul{display: none;}
-#contents .content ul:nth-child(1){display: block;}
-#contents .cont1 .tab{display: flex; margin-bottom: 20px;}
-#contents .cont1 .tab div{
-    background: #fff; padding: 10px; border: 1px solid hotpink;
-    border-right: 0 none; cursor: pointer;
+.subWrap{
+    width: 600px; height: 100%;
+    display: flex; justify-content: space-around; align-items: center;
 }
-#contents .cont1 .tab div:nth-child(2){border-right: 1px solid hotpink;}
-#contents .cont1 .tab .active{background: hotpink;}
-#contents .cont1 .tab .active a{color: #fff;}
-#contents .cont1 .notice li{position: relative; margin-bottom: 15px;}
-#contents .cont1 .notice li a{
-    display: block; width: 250px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    text-indent: 10px;
+.subWrap ul{width: 100%;}
+.subWrap a{
+    display: block; text-align: center;
+    line-height: 40px;
 }
-#contents .cont1 .notice li span{position: absolute; right: 0; top: 0;}
-#contents .cont1 .notice li a::before{
-    content: ""; width: 3px; height: 3px; background: #000;
-    position: absolute; left: 0; top: 50%; border-radius: 50%;
-
-}
-#contents .cont1 .gall li img{width: 100%;}
-#contents .cont1 .gall li{float: left; width: calc((100% - 20px) / 3); margin-right: 10px;}
-#contents .cont1 .gall li:last-child{margin-right: 0;}
-
-/* gallery */
-#contents .cont2{
-    position: relative; 
-    display: flex; justify-content: center; align-items: center;
-}
-#contents .cont2 h3{position: absolute; background: pink; padding: 10px;}
-#contents .cont2 img{width: 100%;}
-
-/* popup */
-#contents .cont3{
-    position: relative; 
-    display: flex; justify-content: center; align-items: center;
-}
-#contents .cont3 a{
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-    background: pink; padding: 10px;
-}
-#contents .cont3 img{width: 100%;}
-
-.background{
-    width: 100%; height: 100%; z-index: 10;
-    position: fixed; top: 0;left: 0;
-    background: rgba(0,0,0,0.5);
-}
-.background .container{
-    width: 500px; height: 300px;
-    background: #fff; padding: 30px;
-    position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
-}
-.background .close{
-    position: absolute; bottom: 30px; right: 30px;
-    background: pink; padding: 5px 10px;
-    cursor: pointer;
+.subWrap a:hover{
+    color: #ff0;
+    background: rgba(0, 0, 0, 0.5);
 }
