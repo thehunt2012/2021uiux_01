@@ -19,7 +19,7 @@ a:link,a:visited{text-decoration: none; color: #111111;}
 }
 .main{
     width: 600px; height: 100%;
-    display: flex; justify-content: space-between; align-items: center;
+    display: flex; justify-content: space-around; align-items: center;
 }
 .main a{
     width: 100%; text-align: center;

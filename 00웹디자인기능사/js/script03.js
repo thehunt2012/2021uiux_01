@@ -1,8 +1,9 @@
 // menu
-$('.main').mouseover(function(){
-    $(this).find('.sub').stop().slideDown(300);
+$('.sub').hide();
+$('nav').mouseover(function(){
+    $('.sub').stop().slideDown(300);
 }).mouseout(function(){
-    $(this).find('.sub').stop().slideUp(300);
+    $('.sub').stop().slideUp(300);
 });
 
 //slide
